@@ -2,7 +2,7 @@
 @section('content')
 
 @section('title')
-    Profile
+    Hồ Sơ
 @endsection
 <div class="content-overlay"></div>
 <div class="header-navbar-shadow"></div>
@@ -11,12 +11,12 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h2 class="content-header-title float-left mb-0">Account Settings</h2>
+                    <h2 class="content-header-title float-left mb-0">Cài Đặt Tài Khoản</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a>
+                            <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a>
                             </li>
-                            <li class="breadcrumb-item active"> Account Settings
+                            <li class="breadcrumb-item active"> Cài Đặt Tài Khoản
                             </li>
                         </ol>
                     </div>
@@ -35,14 +35,14 @@
                             <a class="nav-link d-flex py-75 active" id="account-pill-general" data-toggle="pill"
                                 href="#account-vertical-general" aria-expanded="true">
                                 <i class="feather icon-globe mr-50 font-medium-3"></i>
-                                General
+                                Tổng Quan
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex py-75" id="account-pill-password" data-toggle="pill"
                                 href="#account-vertical-password" aria-expanded="false">
                                 <i class="feather icon-lock mr-50 font-medium-3"></i>
-                                Change Password
+                                Thay Đổi Mật Khẩu
                             </a>
                         </li>
                     </ul>
@@ -69,7 +69,7 @@
                                                             class="col-12 px-0 d-flex flex-sm-row flex-column justify-content-start">
                                                             <label
                                                                 class="btn btn-sm btn-primary ml-50 mb-50 mb-sm-0 cursor-pointer"
-                                                                for="account-upload">Upload new photo</label>
+                                                                for="account-upload">Cập Nhật Ảnh Đại Diện</label>
                                                             <input type="file" id="account-upload" name="avatar"
                                                                 onchange="previewFile(this);" hidden>
                                                         </div>
@@ -79,10 +79,10 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-name">Name</label>
+                                                            <label for="account-name">Họ Tên</label>
                                                             <input type="text"
                                                                 class="form-control  @error('full_name') border border-danger @enderror"
-                                                                id="account-name" placeholder="Name" name="full_name"
+                                                                id="account-name" placeholder="Họ Và Tên" name="full_name"
                                                                 value="{{ Auth::guard('employee')->user()->name }}">
                                                             @error('full_name')
                                                                 <lable style="color: red">
@@ -94,10 +94,10 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-name">Address</label>
+                                                            <label for="account-name">Địa Chỉ</label>
                                                             <input type="text"
                                                                 class="form-control @error('address') border border-danger @enderror"
-                                                                id="account-name" placeholder="Address" name="address"
+                                                                id="account-name" placeholder="Địa Chỉ" name="address"
                                                                 value="{{ Auth::guard('employee')->user()->address }}">
                                                             @error('address')
                                                                 <lable style="color: red">{{ $errors->first('address') }}
@@ -109,10 +109,10 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-name">Phone</label>
+                                                            <label for="account-name">Số Điện Thoại</label>
                                                             <input type="number"
                                                                 class="form-control @error('phone') border border-danger @enderror"
-                                                                id="account-name" placeholder="Phone" name="phone"
+                                                                id="account-name" placeholder="Số Điện Thoại" name="phone"
                                                                 value="{{ Auth::guard('employee')->user()->phone }}">
                                                             @error('phone')
                                                                 <lable style="color: red">{{ $errors->first('phone') }}
@@ -152,9 +152,9 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-old-password">Old Password</label>
+                                                            <label for="account-old-password">Mật Khẩu Cũ</label>
                                                             <input type="password" class="form-control"
-                                                                id="account-old-password" placeholder="Old Password"
+                                                                id="account-old-password" placeholder="Mật Khẩu Cũ"
                                                                 name="old_password">
                                                         </div>
                                                     </div>
@@ -162,9 +162,9 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-new-password">New Password</label>
+                                                            <label for="account-new-password">Mật Khẩu Mới</label>
                                                             <input type="password" id="account-new-password"
-                                                                class="form-control" placeholder="New Password"
+                                                                class="form-control" placeholder="Mật Khẩu Mới"
                                                                 name="new_password">
                                                         </div>
                                                     </div>
@@ -172,8 +172,8 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-retype-new-password">Retype New
-                                                                Password</label>
+                                                            <label for="account-retype-new-password">Nhập Lại
+                                                                Mật Khẩu</label>
                                                             <input type="password" class="form-control"
                                                                 id="account-retype-new-password"
                                                                 placeholder="New Password" name="confirm_password">
@@ -182,9 +182,9 @@
                                                 </div>
                                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                     <button type="submit"
-                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
-                                                        changes</button>
-                                                    <button type="reset" class="btn btn-outline-warning">Cancel</button>
+                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Cập
+                                                        Nhật</button>
+                                                    <button type="reset" class="btn btn-outline-warning">Huỷ</button>
                                                 </div>
                                             </div>
                                         </form>

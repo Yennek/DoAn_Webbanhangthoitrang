@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     @if (isset($employee))
-                        <h4 class="card-title">Update tài khoản</h4>
+                        <h4 class="card-title">Cập Nhật tài khoản</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -43,12 +43,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Name</span>
+                                                    <span>Tên Hiển Thị</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('name') border border-danger @enderror"
-                                                        name="name" placeholder="name"
+                                                        name="name" placeholder="Tên Hiển Thị"
                                                         value="{{ old('name', $employee->name ?? null) }}">
                                                     @error('name')
                                                         <lable style="color: red">{{ $errors->first('name') }}</lable><br><br>
@@ -59,12 +59,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Address</span>
+                                                    <span>Địa Chỉ</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('address') border border-danger @enderror"
-                                                        name="address" placeholder="Address"
+                                                        name="address" placeholder="Địa Chỉ"
                                                         value="{{ old('address', $employee->address ?? null) }}">
                                                     @error('address')
                                                         <lable style="color: red">{{ $errors->first('address') }}</lable>
@@ -81,8 +81,8 @@
                                                 <div class="col-md-8">
                                                     <input type="number"
                                                         class="form-control @error('phone') border border-danger @enderror"
-                                                        name="phone" placeholder="Phone"
-                                                        value="{{ old('phone', $employee->phone ?? null) }}">
+                                                        name="phone" placeholder="Số Điện Thoại"
+                                                   value="{{ old('phone', $employee->phone ?? null) }}">
                                                     @error('phone')
                                                         <lable style="color: red">{{ $errors->first('phone') }}</lable>
                                                         <br><br>
@@ -93,7 +93,7 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Date of birth</span>
+                                                    <span>Ngày Sinh</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="date"
@@ -110,14 +110,14 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Role</span>
+                                                    <span>Vai Trò</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="form-group">
                                                         <select class="form-control" name="role">
-                                                            <option value="1">Admin</option>
-                                                            <option value="2">Employee</option>
-                                                            <option value="3">Shipper</option>
+                                                            <option value="1">Quản Trị Viên</option>
+                                                            <option value="2">Nhân Viên</option>
+                                                            <option value="3">Nhân Viên Giao Hàng</option>
                                                         </select>
                                                         @error('role')
                                                             <lable style="color: red">{{ $errors->first('role') }}</lable>
@@ -130,12 +130,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Password</span>
+                                                    <span>Mật Khẩu</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="password"
                                                         class="form-control @error('password') border border-danger @enderror"
-                                                        name="password" placeholder="Password">
+                                                        name="password" placeholder="Mật Khẩu">
                                                     @error('password')
                                                         <lable style="color: red">{{ $errors->first('password') }}</lable>
                                                         <br><br>
@@ -146,12 +146,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Confirm password</span>
+                                                    <span>Xác Nhận Mật Khẩu</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="password"
                                                         class="form-control @error('password_confirmation') border border-danger @enderror"
-                                                        name="password_confirmation" placeholder="Confirm password">
+                                                        name="password_confirmation" placeholder="Nhập Lại Mật Khẩu">
                                                     @error('password_confirmation')
                                                         <lable style="color: red">
                                                             {{ $errors->first('password_confirmation') }}</lable><br><br>

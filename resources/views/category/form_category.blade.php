@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     @if (isset($categoryById))
-                        <h4 class="card-title">Update category</h4>
+                        <h4 class="card-title">Cập Nhật Danh Mục</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -15,7 +15,7 @@
                             class="form form-horizontal">
                             @method('PUT')
                         @else
-                            <h4 class="card-title">Thêm mới category</h4>
+                            <h4 class="card-title">Thêm Mới Danh Mục</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
@@ -26,12 +26,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Category name</span>
+                                                    <span>Tên Danh Mục</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('category_name') border border-danger @enderror"
-                                                        name="category_name" placeholder="Category name"
+                                                        name="category_name" placeholder="Tên Danh Mục"
                                                         value="{{ old('category_name', $categoryById[0]->category_name ?? null) }}">
                                                     @error('category_name')
                                                         <lable style="color: red">{{ $errors->first('category_name') }}
@@ -49,7 +49,7 @@
                                                             <i class="vs-icon feather icon-check"></i>
                                                         </span>
                                                     </span>
-                                                    <span class="">Sub category</span>
+                                                    <span class="">Danh Mục Con</span>
                                                 </div>
                                             </fieldset>
                                         </div>
@@ -57,7 +57,7 @@
                                             none;" @endif @else style="display: none;" @endif>
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Category</span>
+                                                    <span>Danh Mục</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="form-group">
@@ -87,7 +87,7 @@
                                         <div class="col-md-8 offset-md-4">
                                             <input type="submit" class="btn btn-primary mr-1 mb-1" name="btn_add"
                                                 value="{{ !isset($categoryById) ? 'Thêm mới' : 'Cập nhật' }}">
-                                            <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                            <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Xoá</button>
                                         </div>
                                     </div>
                                 </div>

@@ -16,23 +16,23 @@
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Name</label>
+                                    <label for="basicInput">Tên Hiển Thị</label>
                                     <input type="text" class="form-control" name="s_name" value="{{ request()->s_name }}">
                                 </fieldset>
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Role</label>
+                                    <label for="basicInput">Vai Trò</label>
                                     <select class="select2 form-control" name="s_role">
                                         <option></option>
-                                        <option value="1" {{ request()->s_role == 1 ? 'selected' : '' }}>Admin</option>
-                                        <option value="2" {{ request()->s_role == 2 ? 'selected' : '' }}>Employee</option>
+                                        <option value="1" {{ request()->s_role == 1 ? 'selected' : '' }}>Quản Trị Viên</option>
+                                        <option value="2" {{ request()->s_role == 2 ? 'selected' : '' }}>Nhân Viên</option>
                                     </select>
                                 </fieldset>
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Phone</label>
+                                    <label for="basicInput">Số Điện Thoại</label>
                                     <input type="text" class="form-control" name="s_phone"
                                         value="{{ request()->s_phone }}">
                                 </fieldset>
@@ -40,7 +40,7 @@
                             <div class="col-xl-2 col-md-6 col-12">
                                 <fieldset class="form-group" style="margin-top: 18px; margin-left: 100px">
                                     <label for="basicInput"></label>
-                                    <input class="btn btn-info" type="submit" value="Search..." name="btn_search" />
+                                    <input class="btn btn-info" type="submit" value="Tìm " name="btn_search" />
                                 </fieldset>
                             </div>
                         </div>
@@ -49,8 +49,8 @@
             </div>
         </div>
         <div style="text-align: right; margin-top: 20px">
-            <a href="/createAccAdmin" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Add
-                Account</a>
+            <a href="/createAccAdmin" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Tạo
+                Tài Khoản</a>
         </div>
         <!-- dataTable starts -->
         @include('flash::message')
@@ -60,12 +60,12 @@
                     <tr>
                         <th></th>
                         <th>Email</th>
-                        <th>Name</th>
-                        <th>Role</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Date of birth</th>
-                        <th>Status</th>
+                        <th>Tên Hiển Thị</th>
+                        <th>Chức Vụ</th>
+                        <th>Địa Chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày Sinh</th>
+                        <th>Trạng thái</th>
                         <th>Action</th>
                     </tr>
                 </thead>

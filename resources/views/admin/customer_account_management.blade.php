@@ -16,14 +16,14 @@
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Username</label>
+                                    <label for="basicInput">Tên Đăng Nhập</label>
                                     <input type="text" class="form-control" name="s_username"
                                         value="{{ request()->s_username }}">
                                 </fieldset>
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Status</label>
+                                    <label for="basicInput">Trạng Thái</label>
                                     <select class="select2 form-control" name="s_status">
                                         <option></option>
                                         <option value="1" {{ request()->s_status == 1 ? 'selected' : '' }}>Active</option>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Full Name</label>
+                                    <label for="basicInput">Họ Và Tên</label>
                                     <input type="text" class="form-control" name="s_full_name"
                                         value="{{ request()->s_full_name }}">
                                 </fieldset>
@@ -41,7 +41,7 @@
                             <div class="col-xl-2 col-md-6 col-12">
                                 <fieldset class="form-group" style="margin-top: 18px; margin-left: 100px">
                                     <label for="basicInput"></label>
-                                    <input class="btn btn-info" type="submit" value="Search..." name="btn_search" />
+                                    <input class="btn btn-info" type="submit" value="Tìm Kiếm" name="btn_search" />
                                 </fieldset>
                             </div>
                         </div>
@@ -61,10 +61,10 @@
                     <tr>
                         <th></th>
                         <th>Email</th>
-                        <th>Username</th>
-                        <th>Full name</th>
-                        <th>Date of birth</th>
-                        <th>Status</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Họ Tên</th>
+                        <th>Ngày Sinh</th>
+                        <th>Trạng thái</th>
                         <th>Action</th>
                     </tr>
                 </thead>

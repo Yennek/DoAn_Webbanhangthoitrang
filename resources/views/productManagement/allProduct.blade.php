@@ -9,14 +9,14 @@
                         <div class="row">
                             <div class="col-xl-4 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Name</label>
+                                    <label for="basicInput">Tên Sản Phẩm</label>
                                     <input type="text" class="form-control" name="s_name_product"
                                         value="{{ request()->s_name_product }}">
                                 </fieldset>
                             </div>
                             <div class="col-xl-4 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Status</label>
+                                    <label for="basicInput">Trạng Thái</label>
                                     <select class="select2 form-control" name="s_status">
                                         <option></option>
                                         <option value="0">Ẩn</option>
@@ -26,14 +26,14 @@
                             </div>
                             <div class="col-xl-4 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Supplier</label>
+                                    <label for="basicInput">Nhà Cung Cấp</label>
                                     <input type="text" class="form-control" name="s_supplier"
                                         value="{{ request()->s_supplier }}">
                                 </fieldset>
                             </div>
                             <div class="col-xl-4 col-md-6 col-12">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">First category</label>
+                                    <label for="basicInput">Danh Mục Đầu</label>
                                     <select class="select2 form-control" id="menucha" name="s_category1">
                                         <option></option>
                                         @foreach ($category as $key => $value)
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-xl-4 col-md-6 col-12">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Second category</label>
+                                    <label for="basicInput">Danh Mục Hai</label>
                                     <select class="select2 form-control" id="menucon" name="s_category">
                                         @if (isset(request()->s_category))
                                             @foreach ($subCategory as $key => $valueSubCategory)
@@ -61,7 +61,7 @@
                             <div class="col-xl-4 col-md-6 col-12">
                                 <fieldset class="form-group" style="margin-top: 18px; margin-left: 100px">
                                     <label for="basicInput"></label>
-                                    <input class="btn btn-info" type="submit" value="Search..." name="btn_search" />
+                                    <input class="btn btn-info" type="submit" value="Tìm Kiếm..." name="btn_search" />
                                 </fieldset>
                             </div>
                         </div>
@@ -70,8 +70,8 @@
             </div>
         </div>
         <div style="text-align: right; margin-top: 20px">
-            <a href="/addProduct" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Add
-                product</a>
+            <a href="/addProduct" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Thêm
+                Sản Phẩm</a>
         </div>
         <!-- dataTable starts -->
         @include('flash::message')
@@ -80,13 +80,13 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Supplier</th>
-                        <th>Status</th>
-                        <th>Discount</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
+                        <th>Ảnh</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Nhà Cung Cấp</th>
+                        <th>Trạng Thái</th>
+                        <th>Giảm Giá</th>
+                        <th>Giá bán</th>
+                        <th>Số Lượng</th>
                         <th>Action</th>
                     </tr>
                 </thead>

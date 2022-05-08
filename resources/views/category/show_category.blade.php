@@ -3,8 +3,8 @@
 @section('content')
     @include('flash::message')
     <div style="text-align: right; margin-top: 20px">
-        <a href="/createCategory" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Add
-            category</a>
+        <a href="/createCategory" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Thêm
+            Danh Mục</a>
     </div>
     <section id="collapsible">
         <div class="row">
@@ -20,7 +20,7 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>Category</th>
+                                                <th>Danh Mục</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -49,7 +49,7 @@
                                                                                 <thead>
                                                                                     <tr>
                                                                                         <th></th>
-                                                                                        <th>Sub Category</th>
+                                                                                        <th>Danh Mục Con</th>
                                                                                         <th>Action</th>
                                                                                     </tr>
                                                                                 </thead>

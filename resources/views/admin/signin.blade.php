@@ -67,10 +67,10 @@
                                     <div class="card rounded-0 mb-0 px-2">
                                         <div class="card-header pb-1">
                                             <div class="card-title">
-                                                <h4 class="mb-0">Login Page Admin</h4>
+                                                <h4 class="mb-0">Trang Quản Trị</h4>
                                             </div>
                                         </div>
-                                        <p class="px-2">Welcome back, please login to your account.</p>
+                                        <p class="px-2">Xin chào, vui lòng đăng nhập tài khoản của bạn.</p>
                                         <div class="card-content">
                                             <div class="card-body pt-1">
                                                 <form action="/signinAdmin" method="post">
