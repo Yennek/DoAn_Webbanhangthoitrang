@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     @if (isset($voucher))
-                        <h4 class="card-title">Cập Nhật Phiếu Mã Giá</h4>
+                        <h4 class="card-title">Cập Nhật Phiếu Giảm Giá</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -31,7 +31,7 @@
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('name_voucher') border border-danger @enderror"
-                                                        name="name_voucher" placeholder="Tên"
+                                                        name="name_voucher" placeholder="Tê"
                                                         value="{{ old('name_voucher', $voucher->name ?? null) }}">
                                                     @error('name_voucher')
                                                         <lable style="color: red">{{ $errors->first('name_voucher') }}</lable>
