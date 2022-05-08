@@ -9,13 +9,13 @@
                         <div class="row">
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Name</label>
+                                    <label for="basicInput">Tên</label>
                                     <input type="text" class="form-control" name="s_name" value="{{ request()->s_name }}">
                                 </fieldset>
                             </div>
                             <div class="col-xl-5 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Status</label>
+                                    <label for="basicInput">Trạng Thái</label>
                                     <select class="select2 form-control" name="s_status">
                                         <option></option>
                                         <option value="0" {{ request()->s_status == 1 ? 'selected' : '' }}>Block</option>
@@ -26,7 +26,7 @@
                             <div class="col-xl-2 col-md-6 col-12">
                                 <fieldset class="form-group" style="margin-top: 18px; margin-left: 100px">
                                     <label for="basicInput"></label>
-                                    <input class="btn btn-info" type="submit" value="Search..." name="btn_search" />
+                                    <input class="btn btn-info" type="submit" value="Tìm Kiếm" name="btn_search" />
                                 </fieldset>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
         </div>
         <div style="text-align: right; margin-top: 20px">
             <a href="{{ route('vouchers.create') }}" class="btn bg-gradient-success mr-1 mb-1"><i
-                    class="feather icon-plus-square"></i> Add Voucher</a>
+                    class="feather icon-plus-square"></i> Thêm Mới</a>
         </div>
         <!-- dataTable starts -->
         @include('flash::message')
@@ -45,12 +45,12 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
-                        <th>Quantity</th>
-                        <th>Discount</th>
-                        <th>Effective date</th>
-                        <th>Expiration_date</th>
-                        <th>Status</th>
+                        <th>Tên</th>
+                        <th>Số Lượng</th>
+                        <th>Chiết Khấu</th>
+                        <th>Ngày Bắt Đầu</th>
+                        <th>Ngày Kết Thúc</th>
+                        <th>Trạng Thái</th>
                         <th>Action</th>
                     </tr>
                 </thead>

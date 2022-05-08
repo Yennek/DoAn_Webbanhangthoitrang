@@ -305,7 +305,7 @@
                                          <div class="col-md-8 offset-md-4">
                                              <input type="submit" class="btn btn-primary mr-1 mb-1" name="btn_add"
                                                  value="{{ !isset($product) ? 'Thêm mới' : 'Cập nhật' }}">
-                                             <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                             <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Xoá</button>
                                          </div>
                                      </div>
                                  </div>

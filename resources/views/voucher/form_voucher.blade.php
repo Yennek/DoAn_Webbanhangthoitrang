@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     @if (isset($voucher))
-                        <h4 class="card-title">Update voucher</h4>
+                        <h4 class="card-title">Cập Nhật Phiếu Mã Giá</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -15,7 +15,7 @@
                             enctype="multipart/form-data" class="form form-horizontal">
                             @method('PUT')
                         @else
-                            <h4 class="card-title">Thêm mới voucher</h4>
+                            <h4 class="card-title">Thêm Mới Phiếu Giảm Giá</h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
@@ -26,12 +26,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Name voucher</span>
+                                                    <span>Tên</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('name_voucher') border border-danger @enderror"
-                                                        name="name_voucher" placeholder="Name voucher"
+                                                        name="name_voucher" placeholder="Tên"
                                                         value="{{ old('name_voucher', $voucher->name ?? null) }}">
                                                     @error('name_voucher')
                                                         <lable style="color: red">{{ $errors->first('name_voucher') }}</lable>
@@ -43,12 +43,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Quantity</span>
+                                                    <span>Số Lượng</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="number"
                                                         class="form-control @error('quantity') border border-danger @enderror"
-                                                        name="quantity" placeholder="Quantity"
+                                                        name="quantity" placeholder="Số Lượng"
                                                         value="{{ old('quantity', $voucher->quantity ?? null) }}">
                                                     @error('quantity')
                                                         <lable style="color: red">{{ $errors->first('quantity') }}</lable>
@@ -60,12 +60,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Discount</span>
+                                                    <span>Chiết Khấu</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="number"
                                                         class="form-control @error('discount') border border-danger @enderror"
-                                                        name="discount" placeholder="Discount"
+                                                        name="discount" placeholder="Chiết Khấu"
                                                         value="{{ old('discount', $voucher->discount ?? null) }}">
                                                     @error('discount')
                                                         <lable style="color: red">{{ $errors->first('discount') }}</lable>
@@ -77,7 +77,7 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Start date</span>
+                                                    <span>Ngày Bắt Đầu</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="date"
@@ -94,7 +94,7 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>End date</span>
+                                                    <span>Ngày Kết Thúc</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="date"
@@ -111,7 +111,7 @@
                                         <div class="col-md-8 offset-md-4">
                                             <input type="submit" class="btn btn-primary mr-1 mb-1" name="btn_add"
                                                 value="{{ !isset($voucher) ? 'Thêm mới' : 'Cập nhật' }}">
-                                            <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                            <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Xoá</button>
                                         </div>
                                     </div>
                                 </div>

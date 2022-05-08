@@ -27,12 +27,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Title</span>
+                                                    <span>Tiêu Đề</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('title') border border-danger @enderror"
-                                                        name="title" placeholder="Title"
+                                                        name="title" placeholder="Tiêu đề"
                                                         value="{{ old('title', $slideshow->title ?? null) }}">
                                                     @error('title')
                                                         <lable style="color: red">{{ $errors->first('title') }}</lable>
@@ -44,12 +44,12 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Content</span>
+                                                    <span>Nội Dung</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('content') border border-danger @enderror"
-                                                        name="content" placeholder="Content"
+                                                        name="content" placeholder="Nội Dung"
                                                         value="{{ old('content', $slideshow->content ?? null) }}">
                                                     @error('content')
                                                         <lable style="color: red">{{ $errors->first('content') }}</lable>
@@ -61,7 +61,7 @@
                                         <div class="col-12">
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <span>Image</span>
+                                                    <span>Ảnh</span>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <fieldset class="form-group">
@@ -88,7 +88,7 @@
                                         <div class="col-md-8 offset-md-4">
                                             <input type="submit" class="btn btn-primary mr-1 mb-1" name="btn_add"
                                                 value="{{ !isset($slideshow) ? 'Thêm mới' : 'Cập nhật' }}">
-                                            <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                            <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Xoá</button>
                                         </div>
                                     </div>
                                 </div>
