@@ -566,3 +566,16 @@
     opacity: 1;
   }
 }
+
+#statistics-card .card-header{
+  flex-direction: column;
+}
+#statistics-card .card-header h3{
+  height: 50px;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}

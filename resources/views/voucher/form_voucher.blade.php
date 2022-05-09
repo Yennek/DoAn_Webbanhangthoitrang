@@ -31,10 +31,10 @@
                                                 <div class="col-md-8">
                                                     <input type="text"
                                                         class="form-control @error('name_voucher') border border-danger @enderror"
-                                                        name="name_voucher" placeholder="Tê"
+                                                        name="name_voucher" placeholder="Tên"
                                                         value="{{ old('name_voucher', $voucher->name ?? null) }}">
                                                     @error('name_voucher')
-                                                        <lable style="color: red">{{ $errors->first('name_voucher') }}</lable>
+                                                        <lable style="color: red">{{ $errors->first('') }}</lable>
                                                         <br><br>
                                                     @enderror
                                                 </div>

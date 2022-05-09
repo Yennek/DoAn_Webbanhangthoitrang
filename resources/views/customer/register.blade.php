@@ -17,10 +17,10 @@
                                         @if (Session::has('thanhcong'))
                                             <div class="alert alert-success">{{ Session::get('thanhcong') }}</div>
                                         @endif
-                                        <h4 class="mb-0">Create Account</h4>
+                                        <h4 class="mb-0">Tạo tài khoản</h4>
                                     </div>
                                 </div>
-                                <p class="px-2">Fill the below form to create a new account.</p>
+                                <p class="px-2">Nhập thông tin của bạn để đăng kí tài khoản mới</p>
                                 <div class="card-content">
                                     <div class="card-body pt-0">
                                         <form action="/post-signup" method="post">
@@ -68,15 +68,15 @@
                                                                     <i class="vs-icon feather icon-check"></i>
                                                                 </span>
                                                             </span>
-                                                            <span class=""> I accept the terms & conditions.</span>
+                                                            <span class=""> Tôi chấp nhận mọi điều khoản</span>
                                                         </div>
                                                     </fieldset>
                                                 </div>
                                             </div>
                                             <a href="/signin"
-                                                class="btn btn-outline-primary float-left btn-inline mb-50">Login</a>
+                                                class="btn btn-outline-primary float-left btn-inline mb-50">Đăng nhập</a>
                                             <button type="submit"
-                                                class="btn btn-primary float-right btn-inline mb-50">Register</a>
+                                                class="btn btn-primary float-right btn-inline mb-50">Đăng ký</a>
                                         </form>
                                     </div>
                                 </div>

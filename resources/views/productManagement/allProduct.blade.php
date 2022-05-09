@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-xl-4 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Trạng Thái</label>
+                                    <label for="basicInput">Trạng thái</label>
                                     <select class="select2 form-control" name="s_status">
                                         <option></option>
                                         <option value="0">Ẩn</option>
@@ -26,14 +26,14 @@
                             </div>
                             <div class="col-xl-4 col-md-6 col-12 mb-1">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Nhà Cung Cấp</label>
+                                    <label for="basicInput">Nhà cung cấp</label>
                                     <input type="text" class="form-control" name="s_supplier"
                                         value="{{ request()->s_supplier }}">
                                 </fieldset>
                             </div>
                             <div class="col-xl-4 col-md-6 col-12">
                                 <fieldset class="form-group">
-                                    <label for="basicInput">Danh Mục Đầu</label>
+                                    <label for="basicInput">Danh mục đầu</label>
                                     <select class="select2 form-control" id="menucha" name="s_category1">
                                         <option></option>
                                         @foreach ($category as $key => $value)

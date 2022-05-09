@@ -45,21 +45,21 @@
                                                         <div class="row">
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">Name</label>
+                                                                    <label for="basicInput">Tên</label>
                                                                     <input type="text" class="form-control" name="s_name"
                                                                         value="{{ request()->s_name }}">
                                                                 </fieldset>
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">Phone</label>
+                                                                    <label for="basicInput">Số điện thoại</label>
                                                                     <input type="text" class="form-control" name="s_phone"
                                                                         value="{{ request()->s_phone }}">
                                                                 </fieldset>
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">Detailed address</label>
+                                                                    <label for="basicInput">Địa chỉ</label>
                                                                     <input type="text" class="form-control"
                                                                         name="s_detailed_address"
                                                                         value="{{ request()->s_detailed_address }}">
@@ -67,14 +67,14 @@
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">Wards</label>
+                                                                    <label for="basicInput">Phường</label>
                                                                     <input type="text" class="form-control" name="s_wards"
                                                                         value="{{ request()->s_wards }}">
                                                                 </fieldset>
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">District</label>
+                                                                    <label for="basicInput">Thành phố</label>
                                                                     <input type="text" class="form-control"
                                                                         name="s_district"
                                                                         value="{{ request()->s_district }}">
@@ -82,7 +82,7 @@
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">Province</label>
+                                                                    <label for="basicInput">Tỉnh</label>
                                                                     <input type="text" class="form-control"
                                                                         name="s_province"
                                                                         value="{{ request()->s_province }}">
@@ -90,7 +90,7 @@
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12 mb-1">
                                                                 <fieldset class="form-group">
-                                                                    <label for="basicInput">Order date</label>
+                                                                    <label for="basicInput">Ngày đặt hàng</label>
                                                                     <input type="date" class="form-control"
                                                                         name="s_order_date"
                                                                         value="{{ request()->s_order_date }}">
@@ -101,7 +101,7 @@
                                                                     style="margin-top: 18px; margin-left: 100px">
                                                                     <label for="basicInput"></label>
                                                                     <input class="btn btn-info" type="submit"
-                                                                        value="Search..." name="btn_search" />
+                                                                        value="Tìm kiếm" name="btn_search" />
                                                                 </fieldset>
                                                             </div>
                                                         </div>
@@ -116,14 +116,14 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th>Name</th>
-                                                        <th>Phone</th>
-                                                        <th>Detailed address</th>
-                                                        <th>Wards</th>
-                                                        <th>District</th>
-                                                        <th>Province</th>
-                                                        <th>Order date</th>
-                                                        <th>View Detail</th>
+                                                        <th>Tên</th>
+                                                        <th>Số điện thoại</th>
+                                                        <th>Địa chỉ</th>
+                                                        <th>Phường</th>
+                                                        <th>Thành phố</th>
+                                                        <th>Tỉnh</th>
+                                                        <th>Ngày đặt hàng</th>
+                                                        <th>Xem chi tiết</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

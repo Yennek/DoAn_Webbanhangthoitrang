@@ -86,11 +86,11 @@
 
                                                     <fieldset class="form-label-group position-relative has-icon-left">
                                                         <input type="password" class="form-control" name="password"
-                                                            id="user-password" placeholder="Password" required>
+                                                            id="user-password" placeholder="Mật khẩu" required>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-lock"></i>
                                                         </div>
-                                                        <label for="user-password">Password</label>
+                                                        <label for="user-password">Mật khẩu</label>
                                                     </fieldset>
                                                     <div
                                                         class="form-group d-flex justify-content-between align-items-center">
@@ -103,13 +103,13 @@
                                                                             <i class="vs-icon feather icon-check"></i>
                                                                         </span>
                                                                     </span>
-                                                                    <span class="">Remember me</span>
+                                                                    <span class="">Ghi nhớ</span>
                                                                 </div>
                                                             </fieldset>
                                                         </div>
                                                     </div>
                                                     <button type="submit"
-                                                        class="btn btn-primary float-right btn-inline">Login</button>
+                                                        class="btn btn-primary float-right btn-inline">Đăng nhập</button>
                                                 </form>
                                             </div>
                                         </div>
