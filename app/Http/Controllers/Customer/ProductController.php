@@ -36,7 +36,7 @@ class ProductController extends Controller
             $product = $this->product->getSearchProduct($request);
             $category = $this->category->getCategoryParent(0);
             $category1 = $this->category->getCategoryChill();
-        return view('product.show_products', compact('product','category', 'category1', 'categoryID'));
+        return view('product.show_products', compact('product','category', 'category1'));
         }
         $popularSellingProducts = $this->orderdetail->popularSellingProducts(8, $request);
         $productRandom = $this->product->getProductrandom();
@@ -51,7 +51,7 @@ class ProductController extends Controller
         $product = $this->product->getproductbycatid($request);
         $category = $this->category->getCategoryParent(0);
         $category1 = $this->category->getCategoryChill();
-        return view('product.show_products', compact('product','category', 'category1', 'categoryID'));
+        return view('product.show_products', compact('product','category', 'category1'));
     }
 
     public function getPopularSellingProducts(Request $request){
@@ -85,7 +85,7 @@ class ProductController extends Controller
         }
         $category = $this->category->getCategoryParent(0);
         $category1 = $this->category->getCategoryChill();
-        
+
         return view('product.checkout_cart', compact('category', 'category1', 'address'));
     }
 
@@ -111,7 +111,7 @@ class ProductController extends Controller
     }
 
     public function getProductLatest(Request $request){
-        
+
         if (isset($request->menuid)) {
                 $product = $product = $this->product->getProductLatest($request->menuid, $request->check);
         } else {
