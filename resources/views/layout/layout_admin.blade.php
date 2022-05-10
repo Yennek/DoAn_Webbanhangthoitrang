@@ -158,17 +158,17 @@
                             href="/admin-account-management"><i class="feather icon-users"></i><span class="menu-title"
                                 data-i18n="Todo">Quản Lý tài khoản</span></a>
                     </li>
-                    <li class="nav-item"><a href="{{ route('admin.customerAccountManagement') }}"><i
+                    <li class=" nav-item {{ Request::segment(1) === 'customer-account-management' ? 'active' : '' }}"><a href="{{ route('admin.customerAccountManagement') }}"><i
                                 class="fa fa-star-o"></i><span class="menu-title">Quản lý khách hàng</span></a>
                     </li>
                 @endif
-                <li class=" nav-item"><a href="#"><i class="fa fa-caret-down"></i><span class="menu-title"
+                <li class=" nav-item "><a href="#"><i class="fa fa-caret-down"></i><span class="menu-title"
                             data-i18n="Ecommerce">Khác ...</span></a>
                     <ul class="menu-content">
-                        <li class="nav-item"><a href="{{ route('vouchers.index') }}"><i class="fa fa-bolt"></i><span
+                        <li class=" nav-item {{ Request::segment(1) === 'vouchers' ? 'active' : '' }}"><a href="{{ route('vouchers.index') }}"><i class="fa fa-bolt"></i><span
                                     class="menu-title">Quản lý voucher</span></a>
                         </li>
-                        <li class="nav-item"><a href="{{ route('index.setDiscountProduct') }}"><i
+                        <li class=" nav-item {{ Request::segment(1) === 'discountProduct' ? 'active' : '' }}"><a href="{{ route('index.setDiscountProduct') }}"><i
                                     class="fa fa-certificate"></i><span class="menu-title">Giảm giá sản phẩm</span></a>
                         </li>
                     </ul>

@@ -98,7 +98,7 @@
                                                             </div>
                                                             <div class="col-xl-3 col-md-6 col-12">
                                                                 <fieldset class="form-group"
-                                                                    style="margin-top: 18px; margin-left: 100px">
+                                                                    style="margin-top: 18px; margin-left: 0px">
                                                                     <label for="basicInput"></label>
                                                                     <input class="btn btn-info" type="submit"
                                                                         value="Tìm kiếm" name="btn_search" />
