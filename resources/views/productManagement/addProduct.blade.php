@@ -135,12 +135,11 @@
                                                  </div>
                                                  <div class="col-md-8">
                                                      <fieldset class="form-group">
-                                                         <label for="basicInput"
-                                                             class="@error('image') text-danger @enderror">Ảnh</label>
                                                          <div class="custom-file">
-                                                             <input type="file"
+                                                             <input type="file" style="display:none;"
                                                                  class="form-control @error('image') border border-danger @enderror"
                                                                  name="image" id="basicInput" onchange="previewFile(this);">
+                                                             <label class="btn btn-primary mr-1 mb-1" style="padding: 5px;background: #17efb6; border: 1px 1px 1px 1px" for="basicInput">Chọn Ảnh</label>
                                                          </div>
                                                          <p>
                                                              <img id="image"
