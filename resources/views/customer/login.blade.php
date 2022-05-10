@@ -25,7 +25,7 @@
                                         <form action="/post-signin" method="post">
                                             <fieldset class="form-label-group form-group position-relative has-icon-left">
                                                 <input type="text" name="email" class="form-control" id="user-name"
-                                                    placeholder="Username" required>
+                                                    placeholder="Username" required oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                 <div class="form-control-position">
                                                     <i class="feather icon-user"></i>
                                                 </div>
@@ -38,7 +38,7 @@
                                             </span><br>
                                             <fieldset class="form-label-group position-relative has-icon-left">
                                                 <input type="password" name="password" class="form-control"
-                                                    id="user-password" placeholder="Password" required>
+                                                    id="user-password" placeholder="Password" oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                 <div class="form-control-position">
                                                     <i class="feather icon-lock"></i>
                                                 </div>

@@ -77,7 +77,7 @@
                                                     <fieldset
                                                         class="form-label-group form-group position-relative has-icon-left">
                                                         <input type="text" class="form-control" name="email"
-                                                            id="user-name" placeholder="E-mail" required>
+                                                            id="user-name" placeholder="E-mail" required  oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                         <div class="form-control-position">
                                                             <i class="feather icon-user"></i>
                                                         </div>
@@ -86,7 +86,7 @@
 
                                                     <fieldset class="form-label-group position-relative has-icon-left">
                                                         <input type="password" class="form-control" name="password"
-                                                            id="user-password" placeholder="Mật khẩu" required>
+                                                            id="user-password" placeholder="Mật khẩu" required oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-lock"></i>
                                                         </div>
