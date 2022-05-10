@@ -50,8 +50,7 @@
             </div>
         </div>
         <div style="text-align: right; margin-top: 20px">
-            <a href="/createAccAdmin" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Add
-                Account</a>
+            <a href="/createAccAdmin" class="btn bg-gradient-success mr-1 mb-1"><i class="feather icon-plus-square"></i> Thêm tài khoản</a>
         </div>
         <!-- dataTable starts -->
         @include('flash::message')

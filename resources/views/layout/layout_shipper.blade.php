@@ -120,10 +120,9 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
-                                    href="{{ route('shipper.edit_profile') }}"><i class="feather icon-user"></i> Edit
-                                    Profile</a>
+                                    href="{{ route('shipper.edit_profile') }}"><i class="feather icon-user"></i> Chỉnh sửa thông tin cá nhân</a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="/logoutAdmin"><i
-                                        class="feather icon-power"></i> Logout</a>
+                                        class="feather icon-power"></i> Đăng xuất </a>
                             </div>
                         </li>
                     </ul>

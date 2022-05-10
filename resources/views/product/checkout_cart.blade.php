@@ -31,7 +31,7 @@
 <div class="content-body">
     <div class="icons-tab-steps checkout-tab-steps wizard-circle">
         <!-- Checkout Place order starts -->
-        <h6><i class="step-icon step feather icon-shopping-cart"></i>Cart</h6>
+        <h6><i class="step-icon step feather icon-shopping-cart"></i>Giỏ hàng</h6>
         <fieldset class="checkout-step-1 px-0">
             <div>
                 <section class="list-view product-checkout">
@@ -58,7 +58,7 @@
                                             </p>
                                         </div>
                                         <div class="item-quantity">
-                                            <p class="quantity-title">Quantity</p>
+                                            <p class="quantity-title">Số lượng</p>
                                             <div class="input-group quantity-counter-wrapper">
                                                 <input type="number" value="{{ $value['num'] }}"
                                                     class="quantity-counter" id="quantity_{{ $key }}"
@@ -88,11 +88,11 @@
                                         </div>
                                         <div class="wishlist remove-wishlist">
                                             <a href="javascript:void(0)" onclick="deleteCart({{ $key }})">
-                                                <i class="feather icon-x align-middle"></i> Remove
+                                                <i class="feather icon-x align-middle"></i> Xoá
                                             </a>
                                         </div>
                                         <div class="cart remove-wishlist">
-                                            <i class="fa fa-heart-o mr-25"></i> Wishlist
+                                            <i class="fa fa-heart-o mr-25"></i> Yêu thích
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                                     <div id="detail-amt">
                                         <div id="total">
                                             <div class="price-details">
-                                                <p>Price Details</p>
+                                                <p>Giá chi tiết</p>
                                             </div>
                                             <div class="detail">
                                                 <div>
@@ -128,11 +128,14 @@
                                                     <div class="valid-feedback">
                                                         Voucher hợp lệ
                                                     </div>
+                                                    <div class="invalid-feedback">
+                                                        Voucher không hợp lệ
+                                                    </div>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="detail">
-                                                <div class="detail-title detail-total">Total</div>
+                                                <div class="detail-title detail-total">Thanh toán</div>
                                                 <div class="detail-amt total-amt" id="ts">
                                                     <div class="total" target="total">
                                                         {{ number_format($tong) }} Đ
@@ -154,7 +157,7 @@
         <!-- Checkout Place order Ends -->
 
         <!-- Checkout Customer Address Starts -->
-        <h6><i class="step-icon step feather icon-home"></i>Address</h6>
+        <h6><i class="step-icon step feather icon-home"></i>Địa chỉ</h6>
         <fieldset class="checkout-step-2 px-0">
             <section id="checkout-address" class="list-view product-checkout">
                 <div class="card">
@@ -164,7 +167,7 @@
                         </p>
                         <div style="text-align: right; margin-top: 20px">
                             <a href="/createAddress" class="btn bg-gradient-success mr-1 mb-1"><i
-                                    class="feather icon-plus-square"></i> Add address</a>
+                                    class="feather icon-plus-square"></i> Thêm địa chỉ</a>
                         </div>
                     </div>
                     <div class="card-content">
@@ -294,7 +297,7 @@
         <!-- Checkout Customer Address Ends -->
 
         <!-- Checkout Payment Starts -->
-        <h6><i class="step-icon step feather icon-credit-card"></i>Payment</h6>
+        <h6><i class="step-icon step feather icon-credit-card"></i>Thanh Toán</h6>
         <fieldset class="checkout-step-3 px-0">
             <section id="checkout-payment" class="list-view product-checkout">
                 <div class="payment-type">

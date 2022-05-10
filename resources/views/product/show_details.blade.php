@@ -62,7 +62,7 @@
                                     <i class="feather icon-star text-warning"></i>
                                     <i class="feather icon-star text-secondary"></i>
                                 </span>
-                                <span class="ml-50 text-dark font-medium-1">424 ratings</span>
+                                <span class="ml-50 text-dark font-medium-1">424 lượt đánh giá</span>
                             </div>
                             <hr>
                             <p>{{ $product[0]->description }}</p>
@@ -71,7 +71,7 @@
                             </p>
                             <hr>
                             <div class="item-quantity">
-                                <p class="font-weight-bold">Quantity</p>
+                                <p class="font-weight-bold">Số lượng</p>
                                 <div class="input-group quantity-counter-wrapper">
                                     <input type="text" id="sl" class="quantity-counter" value="1">
                                 </div>
@@ -157,7 +157,7 @@
                             <div class="d-flex flex-column flex-sm-row">
                                 <button class="btn btn-primary mr-0 mr-sm-1 mb-1 mb-sm-0" @if (!Auth::check()) data-toggle="modal" data-target="#danger{{ $product[0]->id }}" @else onclick="addCart( {{ $product[0]->id }} )" @endif>
                                     <i class="feather icon-shopping-cart mr-25"></i>
-                                    ADD TO CART
+                                    THÊM VÀO GIỎ HÀNG
                                 </button>
                                 <!-- Modal -->
                                 <div class="modal fade text-left" id="danger{{ $product[0]->id }}" tabindex="-1"
@@ -210,7 +210,7 @@
                             <div class="w-75 mx-auto">
                                 <i class="feather icon-clock text-primary font-large-2"></i>
                                 <h5 class="mt-2 font-weight-bold">QUY ĐỊNH ĐỔI TRẢ</h5>
-                                <p>Thúy Hằng sẵn sàng hỗ trợ đổi sản phẩm cho bạn trong vòng 30 ngày trên toàn hệ thống.
+                                <p>Cửa hàng sẵn sàng hỗ trợ đổi sản phẩm cho bạn trong vòng 30 ngày trên toàn hệ thống.
                                 </p>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                                 <i class="feather icon-shield text-primary font-large-2"></i>
                                 <h5 class="mt-2 font-weight-bold">
                                     TUYỂN DỤNG TẠI Thúy Hằng</h5>
-                                <p>Thúy Hằng đang cần tuyển hơn 40 vị trí nhân viên bán hàng tại Hà Nội, Hải Phòng, Vĩnh Yên, Nghệ An, Thái Nguyên; TX. Sơn Tây, Hưng Yên (Sắp khai trương)
+                                <p>Cửa hàng đang cần tuyển hơn 40 vị trí nhân viên bán hàng tại Hà Nội, Hải Phòng, Vĩnh Yên, Nghệ An, Thái Nguyên; TX. Sơn Tây, Hưng Yên (Sắp khai trương)
                                 </p>
                             </div>
                         </div>
