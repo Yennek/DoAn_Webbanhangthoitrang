@@ -217,7 +217,7 @@
                     class="text-bold-800 grey darken-2" href=""
                     target="_blank"></a></span><span
                 class="float-md-right d-none d-md-block"><i class="feather icon-heart pink"></i></span>
-            <button class="btn btn-primary btn-icon scroll-top" type="button"><i
+            <button id="back-to-top" class="btn btn-primary btn-icon scroll-top" type="button"><i
                     class="feather icon-arrow-up"></i></button>
         </p>
     </footer>
@@ -250,6 +250,12 @@
     @yield('scripts')
     <script>
         $(document).ready(function() {
+                $('#back-to-top').click(function() {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 400);
+                    return false;
+                });
             setTimeout(function() {
                 $('#alert-message').hide()
             }, 4000)
