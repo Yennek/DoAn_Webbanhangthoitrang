@@ -27,7 +27,7 @@
                                             @csrf
                                             <div class="form-label-group">
                                                 <input type="text" name="userName" id="inputName" class="form-control @error('userName') border border-danger @enderror"
-                                                    placeholder="Username" required>
+                                                    placeholder="Username" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                             @error('userName')
                                                 <lable style="color: red">{{ $errors->first('userName') }}</lable>
                                                 <br><br>
@@ -36,7 +36,7 @@
                                             </div>
                                             <div class="form-label-group">
                                                 <input type="email" name="email" id="inputEmail" class="form-control @error('email') border border-danger @enderror"
-                                                    placeholder="Email" required>
+                                                    placeholder="Email" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                 @error('email')
                                                     <lable style="color: red">{{ $errors->first('email') }}</lable>
                                                     <br><br>
@@ -44,7 +44,7 @@
                                             </div>
                                             <div class="form-label-group">
                                                 <input type="password" name="password1" id="inputPassword"
-                                                    class="form-control @error('password1') border border-danger @enderror" placeholder="Password" required>
+                                                    class="form-control @error('password1') border border-danger @enderror" placeholder="Password" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                 @error('password1')
                                                     <lable style="color: red">{{ $errors->first('password1') }}</lable>
                                                     <br><br>
@@ -52,7 +52,7 @@
                                             </div>
                                             <div class="form-label-group">
                                                 <input type="password" name="password2" id="inputConfPassword"
-                                                    class="form-control @error('password2') border border-danger @enderror"" placeholder="Confirm Password" required>
+                                                    class="form-control @error('password2') border border-danger @enderror"" placeholder="Confirm Password" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                 @error('password2')
                                                     <lable style="color: red">{{ $errors->first('password2') }}</lable>
                                                     <br><br>

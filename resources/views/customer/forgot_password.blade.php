@@ -25,7 +25,7 @@
                                         <form action="/forgot-password" method="POST">
                                             <div class="form-label-group">
                                                 <input type="email" id="inputEmail" class="form-control" placeholder="Email"
-                                                    name="email" required oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
+                                                    name="email" required oninput="this.setCustomValidity('')"  oninvalid="this.setCustomValidity('Trường bắt buộc vui lòng nhập')">
                                                 <label for="inputEmail">Email</label>
                                             </div>
                                             <div class="float-md-left d-block mb-1">
