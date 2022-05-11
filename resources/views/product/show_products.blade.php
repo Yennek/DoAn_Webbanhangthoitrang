@@ -77,7 +77,7 @@
 
             <!-- Ecommerce Products Starts -->
             <section id="ecommerce-products" class="grid-view">
-                @foreach ($product as $key => $value)
+                @forelse ($product as $key => $value)
                     <div class="card ecommerce-card">
                         <div class="card-content">
                             <div class="item-img text-center">
@@ -133,7 +133,9 @@
                             </a>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                <p style="text-align: center; position: absolute; left: 36.5%">Không có sản phẩm nào</p>
+                @endforelse
             </section>
             <!-- Ecommerce Products Ends -->
 
