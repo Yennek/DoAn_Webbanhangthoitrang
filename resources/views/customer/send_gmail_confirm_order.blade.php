@@ -190,8 +190,8 @@
                                                     <p
                                                         style="font-size: 50px; line-height: 1.2; word-break: break-word; text-align: center; font-family: Merriwheater, Georgia, serif; mso-line-height-alt: 60px; letter-spacing: normal; margin: 0;">
                                                         <span style="font-size: 50px;"><em><span style><strong><span
-                                                                            style><span style>Thúy
-                                                                                Hằng</span></span></strong></span></em></span>
+                                                                            style><span style>Bùi
+                                                                                Yến</span></span></strong></span></em></span>
                                                     </p>
                                                 </div>
                                             </div>
