@@ -21,9 +21,9 @@ Route::group(['namespace'=>'Customer'], function(){
 
     Route::get('getNewProducts','ProductController@getNewProducts');
 
-    Route::get('cart','ProductController@getCart'); // giỏ hàng
+    Route::get('cart','ProductController@getCart')->middleware("cors");; // giỏ hàng
 
-    Route::post('addCart','CartController@addCart'); // post thêm giỏ hàng
+    Route::post('addCart','CartController@addCart')->middleware("cors"); // post thêm giỏ hàng
 
     Route::post('checkVoucher','CartController@checkVoucher');
 
@@ -50,7 +50,7 @@ Route::group(['namespace'=>'Customer'], function(){
     Route::put('cancel-status-order&id={id}','OrderController@updateOrderStatus')->name('order.status_cancel')->middleware('checkSignUse');
 
     Route::post('storeAddressSession','DeliveryAddressController@storeAddressSession')->middleware('checkSignUse');
-    
+
     Route::post('postOrderProduct', 'OrderController@postOrderProduct')->middleware('checkSignUse');
 
     Route::get('signin','customerController@form_signin')->middleware('checkUser'); // đăng Nhập form
@@ -127,7 +127,7 @@ Route::group(['namespace'=>'Admin'],function(){
     // shipper
     Route::prefix('shipper')->group(function () {
         Route::get('receive-purchase-order', 'ShipperController@receivePurchaseOrder')->name('shipper.receive_purchase_order')->middleware('CheckLevelShipper');
-        
+
         Route::put('receive-purchase-order&id={id}', 'ShipperController@updateStatusOrder')->name('shipper.update_status_order')->middleware('CheckLevelShipper');
 
         Route::get('order-shipping', 'ShipperController@orderShipping')->name('shipper.order_shipping')->middleware('CheckLevelShipper');
@@ -138,7 +138,7 @@ Route::group(['namespace'=>'Admin'],function(){
 
     });
     // end shipper
-    
+
     // vouchers
     Route::resource('/vouchers', 'VoucherController', ['only' => ['index', 'create', 'store','edit','update', 'destroy']])->name('*','vouchers')->middleware('checkAdminAndEmployee');;
     // end vouchers
@@ -182,7 +182,7 @@ Route::group(['namespace'=>'Admin'],function(){
     Route::put('updateSlideshow&id={id}','SlideShowController@updateSlideshow')->name("slideshow.update")->middleware('CheckLevelAdmin');
 
     Route::delete('deleteSlideshow&id={id}','SlideShowController@deleteSlideshow')->name('slideshow.deleteSlideshow')->middleware('CheckLevelAdmin');
-    
+
     Route::get('discountProduct','ProductManagementController@discountProducts')->name("index.setDiscountProduct")->middleware('checkAdminAndEmployee');
 
     Route::post('setDiscountProduct','ProductManagementController@setDiscountProducts')->name("store.setDiscountProduct")->middleware('checkAdminAndEmployee');
