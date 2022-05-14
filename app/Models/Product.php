@@ -27,7 +27,7 @@ class Product extends Model
         'created_at',
         'updated_at',
     ];
-    
+
     protected $table='products';
 
     public function getAllProduct(array $request) {
@@ -41,6 +41,7 @@ class Product extends Model
                 }
             }
         }
+        $query->orderBy('created_at', 'desc');
         return $query->paginate($this->perPage);
     }
 
@@ -51,10 +52,10 @@ class Product extends Model
     public function getProductRandom(){
         return Product::inRandomOrder()->limit(8)->get();
     }
-
+//
     public function getNewProduct($limit, $request){
         $query = Product::orderBy('products.created_at', 'desc');
-        
+
         if(isset($request['order_by'])) {
             $query->orderBy('products.'.$request['order_by'], $request['sort_order']);
         }
@@ -66,12 +67,12 @@ class Product extends Model
         if(isset($request->order_by)) {
             $query->orderBy($request->order_by, $request->sort_order);
         }
-        
+
         return $query->where('status', 1)->where('products.quantity','>', 0)->paginate(12);
     }
 
     public function getproductbycategoryID($categoryID){
-        $query = Product::where('category_id', $categoryID); 
+        $query = Product::where('category_id', $categoryID);
         return $query->where('status', 1)->where('products.quantity','>', 0)->paginate(8);
     }
 
@@ -131,7 +132,7 @@ class Product extends Model
     }
 
     public function getSearchProductLatest($search, $check) {
-        
+
         $query = $this->_model->newQuery()
         ->where('product_name', 'like', $search)
         ->paginate(24);
@@ -211,7 +212,7 @@ class Product extends Model
         $pro->save();
     }
 
-    // func delete product 
+    // func delete product
     public function destroyProduct($id) {
         Product::destroy($id);
     }
