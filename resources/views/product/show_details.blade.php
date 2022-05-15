@@ -10,14 +10,14 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h2 class="content-header-title float-left mb-0">Product Details</h2>
+                    <h2 class="">Chi tiết sản phẩm</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Home</a>
+                            <li class="breadcrumb-item"><a href="/">Trang chủ</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="#">Category</a>
+                            <li class="breadcrumb-item"><a href="#">Danh mục</a>
                             </li>
-                            <li class="breadcrumb-item active">Details
+                            <li class="breadcrumb-item active">Chi tiết
                             </li>
                         </ol>
                     </div>

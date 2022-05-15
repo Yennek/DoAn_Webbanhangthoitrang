@@ -10,7 +10,7 @@
         <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-12">
-                    <h2 class="content-header-title float-left mb-0">Account Settings</h2>
+                    <h2 class="">Account Settings</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a>
@@ -68,7 +68,7 @@
                                                             class="col-12 px-0 d-flex flex-sm-row flex-column justify-content-start">
                                                             <label
                                                                 class="btn btn-sm btn-primary ml-50 mb-50 mb-sm-0 cursor-pointer"
-                                                                for="account-upload">Upload new photo</label>
+                                                                for="account-upload">Cập nhập ảnh đại diện</label>
                                                             <input type="file" id="account-upload" name="avatar"
                                                                 onchange="previewFile(this);" hidden>
                                                         </div>
@@ -78,7 +78,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-name">Name</label>
+                                                            <label for="account-name">Họ tên</label>
                                                             <input type="text"
                                                                 class="form-control  @error('full_name') border border-danger @enderror"
                                                                 id="account-name" placeholder="Name" name="full_name"
@@ -93,7 +93,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-name">Address</label>
+                                                            <label for="account-name">Địa chỉ</label>
                                                             <input type="text"
                                                                 class="form-control @error('address') border border-danger @enderror"
                                                                 id="account-name" placeholder="Address" name="address"
@@ -108,7 +108,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-name">Phone</label>
+                                                            <label for="account-name">Số điện thoại</label>
                                                             <input type="number"
                                                                 class="form-control @error('phone') border border-danger @enderror"
                                                                 id="account-name" placeholder="Phone" name="phone"
@@ -123,7 +123,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-e-mail">Birth day</label>
+                                                            <label for="account-e-mail">Ngày sinh</label>
                                                             <input type="date"
                                                                 class="form-control @error('birth_date') border border-danger @enderror"
                                                                 name="birth_date"
@@ -137,9 +137,8 @@
                                                 </div>
                                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                     <button type="submit"
-                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
-                                                        changes</button>
-                                                    <button type="reset" class="btn btn-outline-warning">Cancel</button>
+                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Lưu</button>
+                                                    <button type="reset" class="btn btn-outline-warning">Hủy bỏ</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -181,9 +180,8 @@
                                                 </div>
                                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                     <button type="submit"
-                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
-                                                        changes</button>
-                                                    <button type="reset" class="btn btn-outline-warning">Cancel</button>
+                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Lưu</button>
+                                                    <button type="reset" class="btn btn-outline-warning">Hủy bỏ</button>
                                                 </div>
                                             </div>
                                         </form>

@@ -124,7 +124,7 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-e-mail">Birth day</label>
+                                                            <label for="account-e-mail">Ngày sinh</label>
                                                             <input type="date"
                                                                 class="form-control @error('birth_date') border border-danger @enderror"
                                                                 name="birth_date"
@@ -138,9 +138,9 @@
                                                 </div>
                                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                     <button type="submit"
-                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
+                                                        class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Lưu
                                                         changes</button>
-                                                    <button type="reset" class="btn btn-outline-warning">Cancel</button>
+                                                    <button type="reset" class="btn btn-outline-warning">Hủy bỏ</button>
                                                 </div>
                                             </div>
                                         </form>

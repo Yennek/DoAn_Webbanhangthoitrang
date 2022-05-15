@@ -190,7 +190,7 @@
                     data: dataWithMonth,
                 }],
                 title: {
-                    text: 'Số lượng sản phẩm bán theo tháng của năm 2021',
+                    text: 'Số lượng sản phẩm bán theo tháng của năm 2022',
                     align: 'left'
                 },
                 grid: {
