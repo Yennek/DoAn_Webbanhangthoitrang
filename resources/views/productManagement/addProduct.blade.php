@@ -19,7 +19,7 @@
                      </div>
                      <div class="card-content">
                          <div class="card-body">
-                             <form action="/addProduct" method="post" enctype="multipart/form-data"
+                             <form id="addproductform" action="/addProduct" method="post" enctype="multipart/form-data"
                                  class="form form-horizontal">
                                  @endif
                                  <div class="form-body">
@@ -302,7 +302,7 @@
                                              </fieldset>
                                          </div>
                                          <div class="col-md-8 offset-md-4">
-                                             <input type="submit" class="btn btn-primary mr-1 mb-1" name="btn_add"
+                                             <input onclick="this.disabled=true;this.form.submit();" id="btnaddproduct"  type="submit" class="btn btn-primary mr-1 mb-1" name="btn_add"
                                                  value="{{ !isset($product) ? 'Thêm mới' : 'Cập nhật' }}">
                                              <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Xoá</button>
                                          </div>
@@ -318,6 +318,11 @@
      @endsection
      @section('scripts')
          <script>
+
+             // function clickButtonAddProuct() {
+             //
+             // }
+
              function previewFile(input) {
                  var file = $("input[type=file]").get(0).files[0];
 
@@ -334,6 +339,10 @@
                      reader.readAsDataURL(file);
                  }
              }
+
+
+
+
 
          </script>
          <script src="{{ asset('js/back_end/addProduct.js') }}"></script>
