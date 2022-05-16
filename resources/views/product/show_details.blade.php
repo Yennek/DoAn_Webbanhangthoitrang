@@ -218,7 +218,7 @@
                             <div class="w-75 mx-auto">
                                 <i class="feather icon-shield text-primary font-large-2"></i>
                                 <h5 class="mt-2 font-weight-bold">
-                                    TUYỂN DỤNG TẠI Thúy Hằng</h5>
+                                    TUYỂN DỤNG TẠI CỬA HÀNG</h5>
                                 <p>Cửa hàng đang cần tuyển hơn 40 vị trí nhân viên bán hàng tại Hà Nội, Hải Phòng, Vĩnh Yên, Nghệ An, Thái Nguyên; TX. Sơn Tây, Hưng Yên (Sắp khai trương)
                                 </p>
                             </div>
@@ -280,7 +280,7 @@
                         <!-- Add Arrows -->
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-            
+
                     </div>
                 </div>
             </div>
