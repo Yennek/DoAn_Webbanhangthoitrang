@@ -82,13 +82,13 @@ class ShipperController extends Controller
         if (isset($request->btn_finish)) {
             $shipperID = Auth::guard('employee')->user()->id;
             $this->order->updateStatusOrderAndShiperId($id, 3, $shipperID);
-            session()->flash('success', 'Nhận đơn hàng thành công!');
+            session()->flash('success', 'Giao Hàng Thành Công!');
         } else {
             $shipperID = Auth::guard('employee')->user()->id;
             $this->order->updateStatusOrderAndShiperId($id, 2, $shipperID);
-            session()->flash('success', 'Đã hoàn thành đơn hàng!');
+            session()->flash('success', 'Nhận Đơn Hàng Thành Công!');
         }
-        
+
         return redirect()->route('shipper.receive_purchase_order');
     }
 

@@ -147,7 +147,7 @@ $(document).ready(function () {
       $('#data-'+response.id).find('[target="name"]').text(response.name);
       $('#data-'+response.id).find('[target="phone"]').text(response.phone_number);
       $('#data-'+response.id).find('[target="detailed-address"]').text(response.detailed_address + " - " + response.wards + " - " + response.district + " - " + response.province);
-      
+
       toastr.success('Update thành công', 'Success', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
 
       $('#editForm' + response.id).modal('toggle');
@@ -156,6 +156,11 @@ $(document).ready(function () {
   });
 
   $("#order").click(function() {
+      // if (data.error==1) {
+      //     toastr.error(data.message, 'Thất Bại', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
+      // } else {
+      //     toastr.success(data.message, 'Thành Công', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
+      // }
     $.ajax({
       url: "/postOrderProduct",
       method: "POST",
@@ -164,9 +169,9 @@ $(document).ready(function () {
         var obj = JSON.parse(data);
         if (obj.status == "true")
         {
-          toastr.success("Order thành công");
+            toastr.success(obj.message, 'Thành Công', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
         } else {
-          toastr.console.error("Order khong công");
+            toastr.error(obj.message, 'Thất Bại', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
         }
         window.location.href = '/'
       }

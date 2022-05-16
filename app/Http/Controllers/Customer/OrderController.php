@@ -33,10 +33,11 @@ class OrderController extends Controller
         $countDiscount = session()->get('count');
         $data = [
             'status' => 'false',
+            'message' => 'Đặt Hàng Thành Công',
         ];
         if ($orderdetail == true) {
             $this->order->storeOrderProduct($countDiscount);
-            $orderByUser = $this->order->findOrderByUserID(); 
+            $orderByUser = $this->order->findOrderByUserID();
             $order = false;
                 foreach ($orderdetail as $value) {
                     $orderId = $orderByUser[0]->id;
@@ -46,6 +47,11 @@ class OrderController extends Controller
                     $discount = $value['discount'];
                     $size = $value['size'];
                     $order = $this->order->storeOrderdetail($orderId, $idProduct, $unitPrice, $quantity, $discount, $size);
+                    if($this->product->getProductById($idProduct)->quantity < $quantity) {
+                        $data['message'] = "Đăt Hàng thất bại, Số lượng sản phẩm không đủ hoặc đã hết";
+                        return response()->json($data);
+                    }
+
                     $updateDiscountProduct = $this->product->minusQuantityProduct($idProduct, $quantity);
                 }
                 if ($order == true && $updateDiscountProduct == true) {
@@ -55,7 +61,7 @@ class OrderController extends Controller
                     $orderdetail = $this->orderdetail->getOrderdetail($order[0]->id);
                     $order = json_decode(json_encode($order), true);
                     $orderdetails = json_decode(json_encode($orderdetail), true);
-                    
+
                     event(new CustomerOrder($order, $orderdetails, $mail));
 
                     session()->forget('cart');
@@ -88,14 +94,14 @@ class OrderController extends Controller
             foreach ($orderdetails as $orderdetail) {
                 $this->product->plusQuantityProduct($orderdetail->id_product, $orderdetail->quantity);
             }
-        } 
+        }
         if (isset($request->btn_reorder)) {
             $this->order->updateStatusOrderByUserID($id, 0);
             foreach ($orderdetails as $orderdetail) {
                 $this->product->minusQuantityProduct($orderdetail->id_product, $orderdetail->quantity);
             }
         }
-        
+
         return redirect()->route('order.ordered', 0);
     }
 

@@ -91,8 +91,8 @@
                                                 <i class="feather icon-x align-middle"></i> Xoá
                                             </a>
                                         </div>
-                                        <div class="cart remove-wishlist">
-                                            <i class="fa fa-heart-o mr-25"></i> Yêu thích
+                                        <div class="cart">
+                                            <i class="fa fa-heart-o mr-25" onclick="onClickHeart(this)"></i> Yêu thích
                                         </div>
                                     </div>
                                 </div>
@@ -501,6 +501,17 @@
 @section('scripts')
 <script src="{{ asset('js/font_end/get_one.js') }}"></script>
 <script>
+    function onClickHeart(x) {
+        if ( x.classList.contains( "fa-heart") ) {
+            x.classList.remove( "fa-heart" );
+            x.classList.add( "fa-heart-o" );
+        }
+        else {
+            x.classList.remove( "fa-heart-o" );
+            x.classList.add( "fa-heart" );
+        }
+    }
+
     function orderItem() {
         $('.wrap-loading').css('display', 'block');
         $('.loading').css({
