@@ -376,7 +376,7 @@
                                                 <div class="img-container center autowidth" align="center"
                                                     style="padding-right: 0px;padding-left: 0px;">
                                                     <img class="center autowidth" align="center" border="0"
-                                                        src="{{ asset('img') }}/{{ $orderdetail['image'] }}"
+                                                        src="https://pkmacbook.com/wp-content/uploads/2021/06/logo-shop-quan-ao-tren-mang_111916967.png"
                                                         alt="Image product" title="Image product"
                                                         style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 300px; display: block;"
                                                         width="300">

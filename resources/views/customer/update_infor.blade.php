@@ -14,7 +14,7 @@
                     <h2 class="content-header-title float-left mb-0">Cài đặt tài khoản</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a>
+                            <li class="breadcrumb-item"><a href="/">Trang chủ</a>
                             </li>
                             <li class="breadcrumb-item active"> Cài đặt tài khoản
                             </li>
@@ -139,9 +139,9 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-old-password">Old Password</label>
+                                                            <label for="account-old-password">Mật Khẩu Cũ</label>
                                                             <input type="password" class="form-control @error('old_password') border border-danger @enderror"
-                                                                id="account-old-password" placeholder="Old Password"
+                                                                id="account-old-password" placeholder="Mật Khẩu Cũ"
                                                                 name="old_password">
                                                             @error('old_password')
                                                                 <lable style="color: red">{{ $errors->first('old_password') }}</lable>
@@ -153,9 +153,9 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-new-password">New Password</label>
+                                                            <label for="account-new-password">Mật Khẩu Mới</label>
                                                             <input type="password" id="account-new-password"
-                                                                class="form-control @error('new_password') border border-danger @enderror" placeholder="New Password"
+                                                                class="form-control @error('new_password') border border-danger @enderror" placeholder="Mật Khẩu "
                                                                 name="new_password">
                                                             @error('new_password')
                                                                 <lable style="color: red">{{ $errors->first('new_password') }}</lable>
@@ -167,11 +167,11 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <div class="controls">
-                                                            <label for="account-retype-new-password">Retype New
-                                                                Password</label>
+                                                            <label for="account-retype-new-password">Nhập Lại Mật
+                                                                Khẩu Mới</label>
                                                             <input type="password" class="form-control @error('confirm_password') border border-danger @enderror"
                                                                 id="account-retype-new-password"
-                                                                placeholder="New Password" name="confirm_password">
+                                                                placeholder="Mật Khẩu Mới" name="confirm_password">
                                                             @error('confirm_password')
                                                                 <lable style="color: red">{{ $errors->first('confirm_password') }}</lable>
                                                                 <br><br>
@@ -192,7 +192,7 @@
                                         aria-labelledby="account-pill-password" aria-expanded="false">
                                         <div style="text-align: right; margin-top: 20px">
                                             <a href="/createAddress" class="btn bg-gradient-success mr-1 mb-1"><i
-                                                    class="feather icon-plus-square"></i> Add address</a>
+                                                    class="feather icon-plus-square"></i> Thêm Địa Chỉ</a>
                                         </div>
                                         <table class="table data-thumb-view" id="table_data_address">
                                             <thead>
