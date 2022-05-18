@@ -26,7 +26,7 @@
         href="{{ asset('css/app-assets/vendors/css/calendars/extensions/timegrid.min.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('css/app-assets/vendors/css/pickers/pickadate/pickadate.css') }}">
-
+<link rel="icon" href="https://pkmacbook.com/wp-content/uploads/2021/06/logo-shop-quan-ao-tren-mang_111916967.png" type="image/x-icon">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
