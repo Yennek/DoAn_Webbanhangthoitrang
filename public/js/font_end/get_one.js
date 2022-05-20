@@ -170,13 +170,19 @@ $(document).ready(function () {
         if (obj.status == "true")
         {
             toastr.success(obj.message, 'Thành Công', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
+            setTimeout(redirectToHomPage, 3000);
         } else {
             toastr.error(obj.message, 'Thất Bại', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
+            setTimeout(redirectToHomPage, 3000);
         }
-        window.location.href = '/'
+
       }
     });
   });
+
+  function redirectToHomPage() {
+      window.location.href = '/'
+  }
 
   $("#voucher").keyup(function(){
     voucher = $("#voucher").val();
